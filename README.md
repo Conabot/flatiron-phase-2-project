@@ -41,8 +41,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Backend Code Github Repository
 
-https://github.com/Conabot/flatiron-phase-2-react-project-backend
-
+https://github.com/Conabot/flatiron-phase-2-project-json-server
 
 ## Learn More
 

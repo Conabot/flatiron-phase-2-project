@@ -1,26 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect} from 'react';
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home.js";
+import NavBar from "./components/NavBar";
+import NewDogs from './components/NewDogs';
+import DogListCard from './components/DogListContainer';
+
 
 function App() {
+  const [page, setPage] = useState("/")
+  const [dogs, setDogs] = useState([])
+    
+
+  
+
+useEffect (() => { 
+  fetch("http://localhost:3000/dogs")
+  .then(res => res.json())
+  .then((dogs) => setDogs(dogs))
+}, [])
+
+  const onNewDogUpdated = (newDog) => {
+    setDogs([...dogs, newDog]);
+  };
+
+  function onAddNewDogs(newDog) {
+    onNewDogUpdated(newDog)
+}
+ 
+  //console.log("my array: ", dogs)
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Hello Minh</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Dogs Breed</h1>
+        <NavBar onChangePage={setPage} />
+        
+      <Routes>
+        <Route path="/doglistcard" element={<DogListCard dogs={dogs} />} />
+        <Route path="/newdogs" element={<NewDogs onAddNewDogs={onAddNewDogs} />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;

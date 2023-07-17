@@ -35,7 +35,7 @@ function NewDogs({ onAddNewDogs}) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newDog)
   }).then(r=>r.json()).then(dogsData=>{
-    //console.log("dogs after post: ", dogsData)
+    console.log("dogs after post: ", dogsData)
     onAddNewDogs(dogsData)
   })
     }

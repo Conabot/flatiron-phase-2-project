@@ -29,12 +29,12 @@ useEffect (() => {
     onNewDogUpdated(newDog)
 }
  
-  //console.log("my array: ", dogs)
+  //console.log("dogs array: ", dogs)
 
   
   return (
     <div className="app">
-      <h1>Dogs Breed</h1>
+      <h1 style={{color:"red"}}>DOG BREED</h1>
         <NavBar onChangePage={setPage} />
         
       <Routes>

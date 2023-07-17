@@ -35,13 +35,14 @@ function NewDogs({ onAddNewDogs}) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newDog)
   }).then(r=>r.json()).then(dogsData=>{
-    console.log("questions after post: ", dogsData)
+    //console.log("dogs after post: ", dogsData)
     onAddNewDogs(dogsData)
   })
     }
 
   return (
     <div>
+      <h2 style={{color:"blue"}}>Your Dog Breed</h2>
     <form className="newdogs" onSubmit={handleSubmit}>
      
       <label htmlFor='breeds'>Breed:</label>

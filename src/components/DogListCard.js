@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './StyleCard.css';
+import './styleCard.css';
 
 function DogListCard({cardImg, cardBreed, cardAge}) {
 

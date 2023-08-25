@@ -1,6 +1,5 @@
-.card {
+.card{
     background-color: antiquewhite;
-    display: inline-block;
     border: 1px solid black;
     border-radius: 8px;
     width: 20%;

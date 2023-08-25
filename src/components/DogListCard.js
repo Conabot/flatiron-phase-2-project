@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './styleCard.css';
+//import './styleCard.css';
 
 
 

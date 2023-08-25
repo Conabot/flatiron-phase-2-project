@@ -1,4 +1,5 @@
 .card-container {
+    background-color: beige;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;

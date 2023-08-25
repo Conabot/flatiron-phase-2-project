@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "flatiron-phase-2-project-json-server",
+			"path": "../../../flatiron-phase-2-project-json-server"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}

@@ -2,16 +2,17 @@
 import React from 'react';
 import './styleCard.css';
 
-function DogListCard({cardImg, cardBreed, cardAge}) {
+
+
+function DogListCard({cardImg, cardBreed, cardLike, onDeleteClick, onLikeClick}) {
 
   return (
    <div className="card center-align">
+      <h4 className='card-breed'>{cardBreed}</h4>
       <img className="card-image" src={cardImg} alt={"loading.."}/>
-      <h4 className='card-breed'> Breed: {cardBreed}</h4>
-      <p className='card-age'>Age: {cardAge}</p>
+      <button className='like-btn' onClick={onLikeClick} >❤️  {cardLike}</button>
+      <button className='del-btn' onClick ={onDeleteClick}>Delete</button> 
    </div>
-
-    
   );
 }
 

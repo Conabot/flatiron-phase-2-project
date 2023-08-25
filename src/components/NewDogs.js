@@ -6,14 +6,14 @@ const url = "http://localhost:3000/dogs";
 function NewDogs({ onAddNewDogs}) {
   const[dogImg, setDogImg] = useState("")
   const[dogBreed, setDogBreed] = useState("")
-  const [dogAge, setDogAge] =useState('')
+  const [dogLikes, setDogLikes] =useState('')
 
   function handleBreedChange(event){
     setDogBreed(event.target.value)
   }
 
-  function handleAgeChange(e) {
-    setDogAge(e.target.value)
+  function handleLikeChange(e) {
+    setDogLikes(e.target.value)
   }
 
   function handleDogImgChange(e) {
@@ -26,7 +26,7 @@ function NewDogs({ onAddNewDogs}) {
       id: Number(uuid()), 
       breed: dogBreed,
       image: dogImg,
-      age: dogAge,
+      likes: 0,
     };
     onAddNewDogs(newDog)
 
@@ -43,16 +43,16 @@ function NewDogs({ onAddNewDogs}) {
   return (
     <div>
       <h2 style={{color:"blue"}}>Your Dog Breed</h2>
-    <form className="newdogs" onSubmit={handleSubmit}>
+    <form className="dog-form" onSubmit={handleSubmit}>
      
-      <label htmlFor='breeds'>Breed:</label>
+      <label htmlFor='breeds'>Type of Breed:</label>
         <input type="text" 
                 id="breed" 
                 value={dogBreed}
                 onChange={handleBreedChange} />
     
      
-      <label htmlFor="url">Images:</label>
+      <label htmlFor="url">Images Link:</label>
         <input  type="url" 
                 id="image" 
                 value ={dogImg}
@@ -60,15 +60,15 @@ function NewDogs({ onAddNewDogs}) {
                 onChange={handleDogImgChange} />
       
     
-      <label htmlFor='age'>Age: </label>
+      <label htmlFor='likes'>Number of Like: </label>
           
           <input  type="text" 
-                  id="age"  
-                  value={dogAge}  
-                  onChange ={handleAgeChange} />
+                  id="likes"  
+                  value={dogLikes}  
+                  onChange ={handleLikeChange} />
     
    
-      <button type="submit">Add Dog Breed to List</button>
+      <button type="submit" value="submit" >Add Dog Breed to List</button>
      
     </form>
     </div>

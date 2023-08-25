@@ -6,9 +6,17 @@ function NavBar() {
 
 return (
     <div className="navbar">
-            <NavLink end to="/home" >Home</NavLink>
-            <NavLink to="/doglistcard" >DogListCard</NavLink>           
-            <NavLink to="/newdogs" >SubmitYourDogs</NavLink>       
+        <ul>
+            <li>
+            <NavLink end to="/" >Home</NavLink>
+            </li>
+            <li>
+            <NavLink to="/doglistcard" >Dog List Card</NavLink>      
+            </li>
+            <li>    
+            <NavLink to="/newdogs" >Submit Your Dogs</NavLink>    
+            </li>   
+        </ul>
     </div>
 );
 }

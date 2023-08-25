@@ -38,9 +38,9 @@ useEffect (() => {
         <NavBar onChangePage={setPage} />
         
       <Routes>
-        <Route path="/doglistcard" element={<DogListCard dogs={dogs} />} />
+        <Route path="/doglistcard" element={<DogListCard dogs={dogs} setDogs={setDogs}/>} />
         <Route path="/newdogs" element={<NewDogs onAddNewDogs={onAddNewDogs} />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   )

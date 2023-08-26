@@ -23,7 +23,6 @@ img {
 }
 .dog-form {
   background-color: beige;
-  justify-content: center;
   display: flex;
   width: 75%;
   height: auto;

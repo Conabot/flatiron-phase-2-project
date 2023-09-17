@@ -14,7 +14,7 @@ return (
             <NavLink to="/doglistcard" >Dog List Card</NavLink>      
             </li>
             <li>    
-            <NavLink to="/newdogs" >Submit Your Dogs</NavLink>    
+            <NavLink to="/dogsform" >Submit Your Dogs</NavLink>    
             </li>   
         </ul>
     </div>

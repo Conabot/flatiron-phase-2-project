@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 
 const url = "https://minh-tran.onrender.com/dogs";
 
-function NewDogs({ onAddNewDogs}) {
+function DogsForm({ onAddNewDogs}) {
   const[dogImg, setDogImg] = useState("")
   const[dogBreed, setDogBreed] = useState("")
   const [dogLikes, setDogLikes] =useState('')
@@ -75,4 +75,4 @@ function NewDogs({ onAddNewDogs}) {
   );
 }
 
-export default NewDogs;
+export default DogsForm;

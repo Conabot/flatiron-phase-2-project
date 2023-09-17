@@ -30,7 +30,7 @@
     cursor: pointer;
   }
 
-  .del-btn {
+.del-btn {
     background-color: crimson;
     border-radius: 8px;
     color: black;

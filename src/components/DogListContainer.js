@@ -3,7 +3,7 @@ import DogListCard from './DogListCard'
 import "./styleContainer.css"
 
 
-const url = "https://minh-tran.onrender.com/dogs"
+const url = "http://localhost:3000/dogs"
 
 function DogListContainer({dogs, setDogs}) {
 

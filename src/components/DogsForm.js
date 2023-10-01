@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
-const url = "https://minh-tran.onrender.com/dogs";
+const url = "http://localhost:3000/dogs";
 
 function DogsForm({ onAddNewDogs}) {
   const[dogImg, setDogImg] = useState("")

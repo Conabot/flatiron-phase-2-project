@@ -16,7 +16,7 @@ function App() {
   
 
 useEffect (() => { 
-  fetch("https://minh-tran.onrender.com/dogs")
+  fetch("http://localhost:3000/dogs")
   .then(res => res.json())
   .then((dogs) => setDogs(dogs))
 }, [])

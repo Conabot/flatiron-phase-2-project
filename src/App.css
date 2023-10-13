@@ -22,12 +22,12 @@ img {
   margin-top: 20px;
 }
 .dog-form {
+  border-radius: 5px;
   background-color: beige;
-  display: flex;
   width: 75%;
-  height: auto;
+  padding: 20px;
 }
-input[type=text] {
+  input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

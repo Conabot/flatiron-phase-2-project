@@ -58,4 +58,4 @@ function DogListContainer({dogs, setDogs}) {
   )
 }
 
-export default DogListContainer
+export default DogListContainer;

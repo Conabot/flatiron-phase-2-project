@@ -26,7 +26,7 @@ function DogsForm({ onAddNewDogs}) {
       id: Number(uuid()), 
       breed: dogBreed,
       image: dogImg,
-      likes: 0,
+      likes: dogLikes,
     };
     onAddNewDogs(newDog)
 

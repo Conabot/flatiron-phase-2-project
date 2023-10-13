@@ -4,8 +4,11 @@ import React, { useState, useEffect} from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home.js";
 import NavBar from "./components/NavBar";
-import DogsForm from './components/DogsForm';
-import DogListCard from './components/DogListContainer';
+import DogsForm from "./components/DogsForm";
+import DogListCard from './components/DogListCard';
+import DogListContainer from './components/DogListContainer';
+
+
 
 
 function App() {
@@ -38,7 +41,7 @@ useEffect (() => {
         <NavBar onChangePage={setPage} />
         
       <Routes>
-        <Route path="/doglistcard" element={<DogListCard dogs={dogs} setDogs={setDogs}/>} />
+        <Route path="/doglistcontainer" element={<DogListContainer dogs={dogs} setDogs={setDogs}/>} />
         <Route path="/dogsform" element={<DogsForm onAddNewDogs={onAddNewDogs} />} />
         <Route path="/" element={<Home />} />
       </Routes>

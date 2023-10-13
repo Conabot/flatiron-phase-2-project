@@ -11,7 +11,7 @@ return (
             <NavLink end to="/" >Home</NavLink>
             </li>
             <li>
-            <NavLink to="/doglistcard" >Dog List Card</NavLink>      
+            <NavLink to="/doglistcontainer" >Dog List Container</NavLink>      
             </li>
             <li>    
             <NavLink to="/dogsform" >Submit Your Dogs</NavLink>    

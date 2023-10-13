@@ -1,74 +1,31 @@
-# Getting Started with Create React App
+# flatiron-phase-2-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Setup
 
-## Available Scripts
+All the information about Dog Breed can be found in the db.json file. We'll be using json-server to create a RESTful API for our database.
 
-In the project directory, you can run:
+Run npm install to install our dependencies.
 
-### `npm start`
+Then, run npm run server to start up json-server on http://localhost:3001.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In another tab, run npm start to start up our React app at http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before you start building out the application, the first step that you should take is to draw out your component hierarchy. This will tell you how components can pass data to each other as well as where that information should be stored.
 
-### `npm test`
+Deliveries
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+GET/Dogs
 
-### `npm run build`
+When our application loads, make a GET request to /dogs to fetch the dogs array. Given your component tree, think about which component should be responsible for the array. After you have put the data in the proper component, your next job is to render the DogListCard components on the page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+POST/dogs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the DogForm is submitted, make a POST request to /dogs to save a new dogs breed to the server. Using the ideas of controlled form and inverse data flow, think about how to render a new DogListCard for the dog-breeds that you created.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DELETE/dogs/:id
 
-### `npm run eject`
+When the "Delete" button is clicked, make a DELETE request to /dogs/:id with the ID of the dogs-breeds that was clicked to delete the toy from the server. The DogsBreed that you clicked on should also be removed from the DOM.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+PATCH/dogs/:id
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Backend Code Github Repository
-
-https://github.com/Conabot/flatiron-phase-2-project-json-server
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When the "Like" button is clicked, make a PATCH request to /dogs/:id with the id of the dogs that was clicked, along with the new number of likes (this should be sent in the body of the PATCH request, as a object: { likes: 1 }), to update the dogs on the server. Clicking on the button should also increase the number of likes on the DOM.

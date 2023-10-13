@@ -16,7 +16,7 @@ Deliveries
 
 GET/Dogs
 
-When our application loads, make a GET request to /dogs to fetch the dogs array. Given your component tree, think about which component should be responsible for the array. After you have put the data in the proper component, your next job is to render the DogListCard components on the page.
+When our application loads, make a GET request to /dogs to fetch the dogs array. Given your component tree, think about which component should be responsible for tåhe array. After you have put the data in the proper component, your next job is to render the DogListCard components on the page.
 
 POST/dogs
 
